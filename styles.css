@@ -1,0 +1,432 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL Y TIPOGRAFÍA
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #faf9f6; /* Blanco roto / marfil premium */
+    color: #2c2c2c;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Clases de utilidad de estilo */
+.font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+.tracking {
+    letter-spacing: 2px;
+}
+.tracking-wide {
+    letter-spacing: 4px;
+}
+.italic {
+    font-style: italic;
+}
+.text-gold {
+    color: #c5a059 !important;
+}
+.bg-gold {
+    background-color: #c5a059 !important;
+}
+
+/* ===============================
+   HEADER Y NAVBAR
+================================ */
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.logo-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: #1a1a1a !important;
+}
+
+.logo-sub {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-left: -2px;
+    color: #c5a059;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    text-uppercase: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: #555 !important;
+    padding: 8px 15px !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c5a059 !important;
+}
+
+/* Botón Carrito Navbar */
+.btn-cart {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-cart:hover {
+    background-color: #c5a059;
+    color: white;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+    min-height: 75vh;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=1600"); /* Imagen premium de joyería en Unsplash */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Botones con estilo Hikari Quest */
+.btn-gold-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+    background-color: white;
+    color: #1a1a1a;
+    border-color: white;
+}
+
+/* ===============================
+   PRODUCTOS (DISEÑO PREMIUM)
+================================ */
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: #c5a059;
+    margin-top: 15px;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.producto-card {
+    width: 280px;
+}
+
+.producto-card .card {
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.producto-card .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(197, 160, 89, 0.12); /* Sombra suave dorada */
+}
+
+.producto-card img {
+    height: 240px;
+    object-fit: contain;
+    padding: 25px;
+    background-color: #fff;
+    transition: transform 0.4s ease;
+}
+
+.producto-card .card:hover img {
+    transform: scale(1.04);
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-center: center;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-height: 45px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #c5a059;
+    margin-bottom: 15px;
+}
+
+.btn-add-cart {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background-color: #c5a059;
+}
+
+/* ===============================
+   RESEÑAS / EXPERIENCIAS
+================================ */
+.bg-light-gold {
+    background-color: #f5f1ea;
+}
+
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.reseña-card {
+    border: none;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.stars {
+    color: #c5a059;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.reseña-card .card-text {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.client-name {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* ===============================
+   CONTACTO Y COMPONENTES FORM
+================================ */
+#formulario-contacto {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+}
+
+.form-control {
+    border: 1px solid #e1e1e1;
+    padding: 12px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.form-control:focus {
+    border-color: #c5a059;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.btn-dark-luxury {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-dark-luxury:hover {
+    background-color: #c5a059;
+}
+
+/* ===============================
+   CARRITO OFFCANVAS STRUCT
+================================ */
+.offcanvas {
+    width: 400px !important;
+    border-left: none;
+}
+
+.cart-item-img {
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    padding: 4px;
+}
+
+.btn-quantity {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+.btn-gold-actions {
+    background-color: #c5a059;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gold-actions:hover {
+    background-color: #1a1a1a;
+}
+
+/* ===============================
+   FOOTER LUXURY
+================================ */
+.bg-dark-luxury {
+    background-color: #111111;
+}
+
+.text-light-muted {
+    color: #888;
+}
+
+.footer-link {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #c5a059 !important;
+}
+
+/* ===============================
+   ACCESIBILIDAD / FOCUS
+================================ */
+button:focus, a:focus, input:focus, textarea:focus {
+    outline: 2px solid #c5a059;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN MEDIA QUERIES
+================================ */
+@media(max-width: 992px) {
+    .reseñas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero {
+        min-height: 55vh;
+    }
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    .productos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    .reseñas-grid {
+        grid-template-columns: 1fr;
+    }
+    .offcanvas {
+        width: 100% !important;
+    }
+}
